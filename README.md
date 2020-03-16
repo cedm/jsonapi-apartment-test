@@ -8,9 +8,12 @@ A Monkey patch solution available at: `config/initializers/jsonapi_resources.rb`
 
 ## How to test
 
-1. Pull repo, bundle install dependencies, setup database, import seeds, start app.
-2. Browse http://localhost:3000/api/posts (tenant-specific data)
-  * Should respond successfully (no data, but that doesn't matter)
-3. Browse http://localhost:3000/api/account (shared model - singleton resource)
-  * Should respond sucessfully (show Account info) - with Patch or proper solution
-  * Break with SQL error without patch/solution
+1. Pull repo
+2. `bundle install`
+3. `rails db:setup`
+4. `rails s`
+5. Browse http://demo.lvh.me:3000/api/posts (tenant-specific data)
+  * Should respond successfully
+6. Browse http://demo.lvh.me:3000/api/account (shared model - singleton resource)
+  * Should respond sucessfully (show Account info) - with patch or proper solution
+  * Break with SQL error - without patch/solution
